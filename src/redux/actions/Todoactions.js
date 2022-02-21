@@ -13,3 +13,7 @@ export const addTodo = (text) => {
 export const toggleTodo = (id) => {
   return { type: constants.TOGGLE_TODO, id };
 };
+
+export const deleteTodo = (id) => {
+  return { type: constants.DELETE_TODO, payLoad: id };
+};

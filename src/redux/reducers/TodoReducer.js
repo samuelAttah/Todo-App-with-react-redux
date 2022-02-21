@@ -18,6 +18,8 @@ const TodoReducer = (state = initialState.todos, action) => {
         }
         return todo;
       });
+    case constants.DELETE_TODO:
+      return state.filter((todo) => todo.id !== action.payLoad);
     default:
       return state;
   }
